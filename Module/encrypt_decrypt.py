@@ -37,14 +37,6 @@ class Coder:
 
     def encrypt(self):
         for char in self.message:
-            # Needs furhter development!
-            # self.counter += 1
-            # if self.counter % 2 == 0:
-            #     r_int = random.randint(0, len(characters['symbols']) - 1)
-            #     self.encrypted_message.append(characters['symbols'][r_int])
-            # elif self.counter % 3 == 0:
-            #     r_int = random.randint(0, len(characters['numbers']) - 1)
-            #     self.encrypted_message.append(characters['numbers'][r_int])
             if char in characters['alphabet_u']:
                 c_index = characters['alphabet_u'].index(char)
                 characters_len = (len(characters['alphabet_u']))
@@ -116,12 +108,6 @@ class Coder:
         pattern.remove(pattern[-1])    
         shift = [(int(i)*(-1)) for i in pattern]
         for char in self.coded_file:
-        # Needs further development!
-        #     self.counter += 1
-        #     if self.counter % 2 == 0:
-        #         char
-        #     elif self.counter % 3 == 0:
-        #         char
             if char in characters['alphabet_u']:
                 c_index = characters['alphabet_u'].index(char)
                 characters_len = (len(characters['alphabet_u']))
