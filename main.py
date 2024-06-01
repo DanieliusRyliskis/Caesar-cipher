@@ -38,8 +38,6 @@ def encrypt():
     coder = Coder(u_input, u_shift)
     coder.user_input()
     encrypted_message = coder.encrypt()
-    # with open(f"C:/Users/rylis/.ensccode/{file_name}.txt", mode="w", encoding='utf-8') as encrypted_file:
-    #     encrypted_file.write(encrypted_message)
     with open(f"./{file_name}.txt", mode="w", encoding='utf-8') as encrypted_file:
         encrypted_file.write(encrypted_message)
 
@@ -49,8 +47,6 @@ def encrypt():
 def decrypt():
     u_shift = password.get()
     file_name = filename.get()
-    # with open(f"C:/Users/rylis/.ensccode/{file_name}.txt", encoding='utf-8') as coded_file:
-    #     file_content = coded_file.read()
     with open(f"./{file_name}.txt", encoding='utf-8') as coded_file:
         file_content = coded_file.read()
     coder1 = Coder(file_content, u_shift)
